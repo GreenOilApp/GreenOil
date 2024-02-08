@@ -4,62 +4,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity"
-    >
+    tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="125dp"
         android:layout_height="175dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/logo"
-        android:src="@drawable/logo"
-        >
+        android:src="@drawable/logo"/>
 
-    </ImageView>
-
-    <EditText
-        android:id="@+id/emailLogin"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/rounded_edittext"
-        android:layout_marginBottom="5dp"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/grey"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="10dp">
+        android:layout_marginBottom="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/baseline_alternate_email_24"
+            android:drawablePadding="10dp"
+            android:textDirection="ltr"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    </EditText>
-
-    <EditText
-        android:id="@+id/passLogin"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/rounded_edittext"
-        android:backgroundTint="@color/grey"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="10dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/baseline_password_24"
+            android:drawablePadding="10dp"
+            android:textDirection="ltr"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    </EditText>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/loginComplete"
         android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/rounded_edittext"
         android:layout_marginTop="20dp"
         android:text="Login"
-        android:backgroundTint="@color/light_green">
-
-    </Button>
+        android:backgroundTint="@color/light_green"
+        android:textSize="16dp"/>
 
     <TextView
         android:id="@+id/forgotPass"
@@ -69,17 +75,15 @@
         android:textColor="@color/black"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        >
+        android:textSize="15dp"/>
 
-    </TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Or"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp">
-
-    </TextView>
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,46 +92,35 @@
         android:layout_gravity="center"
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
-        >
+        android:textSize="15dp"/>
 
-    </TextView>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center"
         >
-            <Button
-                android:id="@+id/signUpEmail"
-                android:layout_width="95dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/rounded_button"
-                android:text="Email"
-                android:backgroundTint="@color/light_green"
-                >
+        <Button
+            android:id="@+id/signUpEmail"
+            android:layout_width="95dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button"
+            android:text="Email"
+            android:backgroundTint="@color/light_green"/>
 
-            </Button>
-            <Button
-                android:id="@+id/signUpGoogle"
-                android:layout_width="95dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/rounded_button"
-                android:backgroundTint="@color/light_green"
-                android:text="Google"
+        <Button
+            android:id="@+id/signUpGoogle"
+            android:layout_width="95dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/light_green"
+            android:text="Google"/>
 
-                >
-
-            </Button>
     </LinearLayout>
-
-
-
-
-
 </LinearLayout>
