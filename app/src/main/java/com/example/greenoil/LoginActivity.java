@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                 boolean validPass = validatePass(pass);
 
 
-                if (validEmail && true && validPass == true){
+                if (validEmail == true && validPass == true){
 
                     mAuth.signInWithEmailAndPassword(email, pass)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
