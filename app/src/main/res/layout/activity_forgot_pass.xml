@@ -63,10 +63,4 @@
         android:backgroundTint="@color/light_green"
         android:textSize="16dp"/>
 
-
-
-
-
-
-
 </LinearLayout>
