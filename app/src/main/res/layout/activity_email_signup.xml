@@ -114,7 +114,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/rounded_edittext"
         android:layout_marginTop="25dp"
-        android:text="Signup"
+        android:text="Sign Up"
         android:backgroundTint="@color/light_green"/>
 
 </LinearLayout>
