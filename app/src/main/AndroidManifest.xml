@@ -10,7 +10,9 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".forgot_pass"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/EditText"
+            />
         <activity
             android:name=".Homepage"
             android:exported="false" />
@@ -39,16 +41,6 @@
             android:theme="@style/EditText">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ForgotPassActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

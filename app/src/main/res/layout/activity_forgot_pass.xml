@@ -47,7 +47,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/rounded_edittext"
         android:layout_marginTop="20dp"
-        android:text="Login"
+        android:text="Send Email to Reset Password"
         android:backgroundTint="@color/light_green"
         android:textSize="16dp"/>
 
@@ -59,7 +59,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/rounded_edittext"
         android:layout_marginTop="20dp"
-        android:text="Login"
+        android:text="Back to Login"
         android:backgroundTint="@color/light_green"
         android:textSize="16dp"/>
 

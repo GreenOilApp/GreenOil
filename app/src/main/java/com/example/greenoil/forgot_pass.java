@@ -3,6 +3,7 @@ package com.example.greenoil;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -47,20 +48,29 @@ public class forgot_pass extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
 
                             if(task.isSuccessful()){
-                                Toast.makeText(forgot_pass.this, "check YOUR EMAIL.",
+                                Toast.makeText(forgot_pass.this, "Check Your Email",
                                         Toast.LENGTH_SHORT).show();
 
                             }
                             else{
-                                Toast.makeText(forgot_pass.this, "this email is not rejestared.",
+                                Toast.makeText(forgot_pass.this, "This Email is not Registered",
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
                 }else {
-                    Toast.makeText(forgot_pass.this, "not valid email.",
+                    Toast.makeText(forgot_pass.this, "Invalid Email",
                             Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( forgot_pass.this,LoginActivity.class);
+                startActivity(intent);
+
             }
         });
     }
