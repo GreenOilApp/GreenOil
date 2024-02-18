@@ -12,8 +12,10 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
@@ -38,51 +40,42 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        //Reset Button Listener (Reset password methode)
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                strEmail = edtEmail.getText().toString().trim();
-                if (!TextUtils.isEmpty(strEmail)) {
-                    ResetPassword();
-                } else {
-                    edtEmail.setError("Email field can't be empty");
+                String email = String.valueOf( edtEmail.getText()).trim();
+                boolean validEmail = validateEmail(email);
+                if(validEmail == true){
+
+                    mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+
+                            if(task.isSuccessful()){
+                                Toast.makeText(ForgotPasswordActivity.this, "check YOUR EMAIL.",
+                                        Toast.LENGTH_SHORT).show();
+
+                            }
+                            else{
+                                Toast.makeText(ForgotPasswordActivity.this, "this email is not rejestared.",
+                                        Toast.LENGTH_SHORT).show();
+
+                            }
+
+                        }
+                    });
+                }else {
+                    Toast.makeText(ForgotPasswordActivity.this, "not valid email.",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
-
-        //Back Button Code
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-
     }
+    public boolean validateEmail(String email){
 
-    private void ResetPassword() {
-        progressBar.setVisibility(View.VISIBLE);
-        btnReset.setVisibility(View.INVISIBLE);
-
-        mAuth.sendPasswordResetEmail(strEmail)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(ForgotPasswordActivity.this, "Reset Password link has been sent to your registered Email", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(ForgotPasswordActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(ForgotPasswordActivity.this, "Error :- " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                        progressBar.setVisibility(View.INVISIBLE);
-                        btnReset.setVisibility(View.VISIBLE);
-                    }
-                });
+        if (email.isEmpty()){
+            return false;
+        }
+        return true;
     }
 }
