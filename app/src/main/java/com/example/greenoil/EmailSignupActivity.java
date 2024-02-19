@@ -17,7 +17,10 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
 import java.util.regex.Pattern;
 
 public class EmailSignupActivity extends AppCompatActivity {
@@ -73,6 +76,7 @@ public class EmailSignupActivity extends AppCompatActivity {
                                     Progress.setVisibility(View.GONE);
 
                                     if (task.isSuccessful()) {
+
                                         Toast.makeText(EmailSignupActivity.this, "Account created.",
                                                 Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(EmailSignupActivity.this, LoginActivity.class);
