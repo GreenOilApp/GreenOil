@@ -12,10 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 import java.util.regex.Pattern;
 
 public class EmailSignupActivity extends AppCompatActivity {
@@ -27,8 +32,7 @@ public class EmailSignupActivity extends AppCompatActivity {
     Button signUpCompleteBtn;
     ProgressBar Progress;
     FirebaseAuth mAuth;
-
-
+    DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,7 @@ public class EmailSignupActivity extends AppCompatActivity {
         signUpCompleteBtn = findViewById(R.id.signUpComplete);
         Progress = findViewById(R.id.progressBar);
         mAuth = FirebaseAuth.getInstance();
+
 
 
         signUpCompleteBtn.setOnClickListener(new View.OnClickListener() {
@@ -74,12 +79,22 @@ public class EmailSignupActivity extends AppCompatActivity {
 
                                     if (task.isSuccessful()) {
 
-                                        Toast.makeText(EmailSignupActivity.this, "Account created.",
-                                                Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(EmailSignupActivity.this, LoginActivity.class);
-                                        startActivity(intent);
-                                        finish();
+                                        HashMap<String, String> user = new HashMap<>();
+                                        user.put("Email", email);
+                                        user.put("Name", name);
+                                        user.put("Phone Number", num);
 
+                                        mDatabase.child(num).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+
+                                                Toast.makeText(EmailSignupActivity.this, "Account created.",
+                                                        Toast.LENGTH_SHORT).show();
+                                                Intent intent = new Intent(EmailSignupActivity.this, LoginActivity.class);
+                                                startActivity(intent);
+                                                finish();
+                                            }
+                                        });
                                     } else {
                                         // If sign in fails, display a message to the user.
                                         Toast.makeText(EmailSignupActivity.this, "Authentication failed.",
