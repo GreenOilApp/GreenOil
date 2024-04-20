@@ -8,11 +8,64 @@
     android:layout_gravity="center_horizontal"
     tools:context=".Homepage">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="welcome"
-        android:textSize="30dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="277dp"
+            android:src="@drawable/recycling"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Be Recycled"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="27dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help the planet &amp; earn rewards! "
+            android:textSize="28dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="115dp"
+            android:layout_marginLeft="27dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@drawable/rectangular"
+            android:layout_marginTop="260dp"/>
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/button_rectangle"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="60dp"
+        android:text="Recycle Your Oil Now!"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"/>
+
+    <ImageButton
+        android:layout_width="340dp"
+        android:layout_height="145dp"
+        android:src="@drawable/ehsan"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"/>
+
 
 </LinearLayout>
