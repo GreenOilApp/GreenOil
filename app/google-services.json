@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "763573210574",
+    "project_id": "greenoil-ee729",
+    "storage_bucket": "greenoil-ee729.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763573210574:android:24e55c2976922d0771af9f",
+        "android_client_info": {
+          "package_name": "com.example.greenoil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR23RpW3ewIgoYL4p4Tx3hsj56pqvpr74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
