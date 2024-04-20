@@ -16,11 +16,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
 import java.util.regex.Pattern;
 
 public class EmailSignupActivity extends AppCompatActivity {
@@ -30,8 +25,9 @@ public class EmailSignupActivity extends AppCompatActivity {
                     "(?=.*[a-zA-Z])" + "(?=.*[@#$%^&+=])" + "(?=\\S+$)" + ".{8,30}" + "$");
     TextInputEditText fullName,phoneNum,emailSignUp,password,passConfirm;
     Button signUpCompleteBtn;
-    FirebaseAuth mAuth;
     ProgressBar Progress;
+    FirebaseAuth mAuth;
+
 
 
     @Override
@@ -46,8 +42,9 @@ public class EmailSignupActivity extends AppCompatActivity {
         password = findViewById(R.id.passSignUp);
         passConfirm = findViewById(R.id.passSignUpConfirm);
         signUpCompleteBtn = findViewById(R.id.signUpComplete);
-        mAuth = FirebaseAuth.getInstance();
         Progress = findViewById(R.id.progressBar);
+        mAuth = FirebaseAuth.getInstance();
+
 
         signUpCompleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
