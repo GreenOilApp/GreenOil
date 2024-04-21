@@ -28,7 +28,7 @@
             android:hint="Full Name"
             android:inputType="text"
             android:focusedByDefault="true"
-            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawableLeft="@drawable/icon_person"
             android:drawablePadding="10dp"
             android:textDirection="ltr"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:hint="Phone Number"
             android:inputType="phone"
-            android:drawableLeft="@drawable/baseline_phone_24"
+            android:drawableLeft="@drawable/icon_phone"
             android:drawablePadding="10dp"
             android:textDirection="ltr"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:drawableLeft="@drawable/baseline_alternate_email_24"
+            android:drawableLeft="@drawable/icon_email"
             android:drawablePadding="10dp"
             android:textDirection="ltr"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:drawableLeft="@drawable/baseline_password_24"
+            android:drawableLeft="@drawable/icon_password"
             android:drawablePadding="10dp"
             android:textDirection="ltr"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:hint="Conferm Password"
             android:inputType="textPassword"
-            android:drawableLeft="@drawable/baseline_password_24"
+            android:drawableLeft="@drawable/icon_password"
             android:drawablePadding="10dp"
             android:textDirection="ltr"
             />
