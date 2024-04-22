@@ -9,6 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".LocationPickerActivity"
+            android:exported="false" />
+        <activity
             android:name=".SchedulePickupActivity"
             android:exported="false" />
         <activity
