@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".Homepage">
@@ -40,24 +41,23 @@
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_marginTop="260dp"
-            android:background="@drawable/rectangular" />
+            android:background="@drawable/rectangul1" />
 
     </FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
         android:id="@+id/component2"
-        android:layout_below="@+id/component1"
-        android:layout_marginTop="10dp">
+        android:layout_below="@+id/component1">
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_rectangle"
-            android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+            android:layout_height="80dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/button_rectangle1"
+            android:drawableRight="@drawable/icon_arrow"
             android:paddingLeft="60dp"
             android:paddingRight="40dp"
             android:text="Recycle Your Oil Now!"
@@ -73,13 +73,93 @@
         android:layout_height="wrap_content"
         android:id="@+id/component3"
         android:layout_below="@+id/component2"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="25dp">
 
         <ImageButton
             android:layout_width="340dp"
-            android:layout_height="145dp"
+            android:layout_height="130dp"
             android:layout_gravity="center"
             android:src="@drawable/ehsan" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:id="@+id/component4"
+        android:layout_below="@+id/component3"
+        android:layout_marginTop="25dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:gravity="left|center"
+            android:background="@drawable/button_rectangle2"
+            android:text="Your Points"
+            android:textSize="15dp"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/icon_leaf"
+            android:drawableRight="@drawable/icon_arrow"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/component5"
+        android:layout_below="@+id/component4"
+        android:layout_marginTop="25dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="114dp"
+                android:layout_height="60dp"
+                android:id="@+id/learnBut"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_rectangle2"
+                android:drawableTop="@drawable/icon_info"
+                android:text="Learn more"
+                android:textSize="13dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="114dp"
+                android:layout_height="60dp"
+                android:id="@+id/rewardBut"
+                android:layout_toRightOf="@+id/learnBut"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_rectangle2"
+                android:drawableTop="@drawable/icon_gift"
+                android:text="Your rewards"
+                android:textSize="13dp"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:layout_width="114dp"
+                android:layout_height="60dp"
+                android:id="@+id/exploreBut"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:layout_toRightOf="@+id/rewardBut"
+                android:background="@drawable/button_rectangle2"
+                android:drawableTop="@drawable/icon_explore"
+                android:text="Explore rewards"
+                android:textSize="13dp"
+                android:textAllCaps="false"/>
+
+        </RelativeLayout>
 
     </FrameLayout>
 
@@ -91,8 +171,12 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:foregroundGravity="top"/>
+            android:layout_height="60dp"
+            android:foregroundGravity="top"
+            android:background="@drawable/rectangul2"
+            app:menu="@menu/button_nav_menu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </FrameLayout>
 
