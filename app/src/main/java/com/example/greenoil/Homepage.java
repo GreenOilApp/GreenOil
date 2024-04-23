@@ -27,7 +27,7 @@ public class Homepage extends AppCompatActivity {
                     return true;
 
                 case R.id.schedule:
-                    startActivity(new Intent(getApplicationContext(), schedule.class));
+                    startActivity(new Intent(getApplicationContext(), ScheduleOptions.class));
                     overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
                     finish();
                     return true;

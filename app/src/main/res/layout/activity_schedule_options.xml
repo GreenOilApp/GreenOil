@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Homepage"
+    android:background="@color/off_white">
+
+
+    <FrameLayout
+        android:layout_width="350dp"
+        android:layout_height="225dp"
+        android:id="@+id/pickupOption"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/white_box"
+        android:elevation="2dp">
+
+        <Button
+            android:id="@+id/pickupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick up"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/button_rectangle1"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/distribution"
+            android:layout_marginTop="10dp"
+            />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="350dp"
+        android:layout_height="225dp"
+        android:id="@+id/dropoffOption"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/white_box"
+        android:elevation="2dp">
+
+        <Button
+            android:id="@+id/dropoffBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drop Off"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/button_rectangle1"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/dropoff"
+            android:layout_marginTop="10dp"
+            />
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/component6"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:foregroundGravity="top"
+            android:id="@+id/bottomnavigation"
+            android:background="@drawable/rectangul2"
+            app:menu="@menu/button_nav_menu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </FrameLayout>
+
+</RelativeLayout>

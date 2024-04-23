@@ -274,7 +274,7 @@
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:layout_gravity="center"
-            android:background="@drawable/green_box"
+            android:background="@drawable/button_rectangle1"
             android:elevation="4dp">
 
             <Button

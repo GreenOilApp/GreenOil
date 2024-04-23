@@ -9,10 +9,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ScheduleDropoff"
+            android:exported="false" />
+        <activity
             android:name=".profile"
             android:exported="false" />
         <activity
-            android:name=".schedule"
+            android:name=".ScheduleOptions"
             android:exported="false" />
         <activity
             android:name=".LocationPickerActivity"

@@ -11,7 +11,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseUser;
@@ -86,7 +85,7 @@ public class profile extends AppCompatActivity {
                     finish();
                     return true;
                 case R.id.schedule:
-                    startActivity(new Intent(getApplicationContext(), schedule.class));
+                    startActivity(new Intent(getApplicationContext(), ScheduleOptions.class));
                     overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
                     finish();
                     return true;
