@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -79,12 +80,13 @@ public class EmailSignupActivity extends AppCompatActivity {
 
                                     if (task.isSuccessful()) {
 
+                                        FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
                                         HashMap<String, String> user = new HashMap<>();
-                                        user.put("Email", email);
                                         user.put("Name", name);
+                                        user.put("Email", email);
                                         user.put("Phone Number", num);
 
-                                        mDatabase.child(num).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        mDatabase.child(user1.getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
 

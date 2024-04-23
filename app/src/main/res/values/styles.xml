@@ -12,4 +12,8 @@
         <item name="colorPrimaryDark">@color/green</item>
         <item name="colorAccent">@color/green</item>
     </style>
+
+    <style name="circular">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

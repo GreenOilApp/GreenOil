@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">GreenOil</string>
     <string name="logo">Image of the GreenOil company logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

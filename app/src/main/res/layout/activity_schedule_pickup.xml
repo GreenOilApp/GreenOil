@@ -18,7 +18,7 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="50dp"
-            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:src="@drawable/icon_arrow_back"
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_gravity="center"

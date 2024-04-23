@@ -57,7 +57,7 @@
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
             android:background="@drawable/button_rectangle1"
-            android:drawableRight="@drawable/icon_arrow"
+            android:drawableRight="@drawable/icon_arrow_next"
             android:paddingLeft="60dp"
             android:paddingRight="40dp"
             android:text="Recycle Your Oil Now!"
@@ -103,7 +103,7 @@
             android:textSize="15dp"
             android:textAllCaps="false"
             android:drawableLeft="@drawable/icon_leaf"
-            android:drawableRight="@drawable/icon_arrow"/>
+            android:drawableRight="@drawable/icon_arrow_next"/>
 
     </FrameLayout>
 
@@ -173,6 +173,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:foregroundGravity="top"
+            android:id="@+id/bottomnavigation"
             android:background="@drawable/rectangul2"
             app:menu="@menu/button_nav_menu">
 
