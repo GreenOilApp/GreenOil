@@ -16,6 +16,7 @@
         android:id="@+id/pickComponent1">
 
         <ImageButton
+            android:id="@+id/backToOptionsBtn"
             android:layout_width="40dp"
             android:layout_height="50dp"
             android:src="@drawable/icon_arrow_back"
@@ -72,8 +73,9 @@
                     android:padding="9dp"
                     android:layout_gravity="center"
                     android:background="@color/white"
-                    android:elevation="0dp">
-<!--                    To make onClick-->
+                    android:elevation="0dp"
+                    android:onClick="subtractValue">
+
                 </ImageButton>
 
             </androidx.cardview.widget.CardView>
@@ -118,8 +120,9 @@
                     android:scaleType="centerCrop"
                     android:padding="9dp"
                     android:layout_gravity="center"
-                    android:background="@color/white">
-<!--                    To make onClick-->
+                    android:background="@color/white"
+                    android:onClick="addValue">
+
                 </ImageButton>
             </androidx.cardview.widget.CardView>
 
@@ -220,14 +223,15 @@
         android:elevation="2dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="125dp"
+            android:layout_height="25dp"
             android:hint="Select Date"
             android:id="@+id/tvDate"
             android:layout_gravity="center"
             android:textSize="17sp"
             android:textColor="@color/black"
             android:textStyle="bold"
+            android:gravity="center"
             >
 
         </TextView>
@@ -243,14 +247,15 @@
             android:elevation="2dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="25dp"
                 android:hint="Select Time"
                 android:id="@+id/tvTime"
                 android:layout_gravity="center"
                 android:textSize="17sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
+                android:gravity="center"
                 >
 
             </TextView>
