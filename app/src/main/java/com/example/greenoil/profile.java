@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,8 +26,8 @@ import com.google.firebase.database.ValueEventListener;
 public class profile extends AppCompatActivity {
 
     TextView textUsername1,textUsername2,textEmail,textPhone;
+    Button editProfile;
     BottomNavigationView bottomNav;
-
     FirebaseUser user;
     DatabaseReference databaseReference;
 
@@ -39,6 +41,7 @@ public class profile extends AppCompatActivity {
         textUsername2 = findViewById(R.id.fullName2);
         textEmail = findViewById(R.id.email);
         textPhone = findViewById(R.id.phone);
+        editProfile = findViewById(R.id.edit_profile);
         bottomNav = findViewById(R.id.bottomnavigation);
 
         SharedPreferences sharedPreferences = getSharedPreferences("my_shared_preferences", Context.MODE_PRIVATE);
@@ -72,9 +75,17 @@ public class profile extends AppCompatActivity {
         }
 
 
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), editProfile.class));
+                overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
+                finish();
+            }
+        });
+
 
         bottomNav.setSelectedItemId(R.id.profile);
-
         bottomNav.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()){
@@ -85,7 +96,7 @@ public class profile extends AppCompatActivity {
                     finish();
                     return true;
                 case R.id.schedule:
-                    startActivity(new Intent(getApplicationContext(), ScheduleOptions.class));
+                    startActivity(new Intent(getApplicationContext(), schedule.class));
                     overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
                     finish();
                     return true;

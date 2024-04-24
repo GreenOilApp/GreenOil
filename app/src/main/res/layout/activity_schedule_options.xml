@@ -6,8 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".Homepage"
-    android:background="@color/off_white">
+    tools:context=".ScheduleOptions">
 
 
     <FrameLayout
@@ -15,7 +14,7 @@
         android:layout_height="240dp"
         android:id="@+id/pickupOption"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/white_box"
         android:elevation="2dp">
 
@@ -72,22 +71,5 @@
     </FrameLayout>
 
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/component6"
-        android:layout_alignParentBottom="true">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:foregroundGravity="top"
-            android:id="@+id/bottomnavigation"
-            android:background="@drawable/rectangul2"
-            app:menu="@menu/button_nav_menu">
-
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-    </FrameLayout>
 
 </RelativeLayout>
