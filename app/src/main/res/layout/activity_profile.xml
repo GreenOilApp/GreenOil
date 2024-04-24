@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".Homepage">
+    tools:context=".profile">
 
 
     <TextView

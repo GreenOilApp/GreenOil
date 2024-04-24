@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,7 +27,7 @@ public class profile extends AppCompatActivity {
 
     TextView textUsername1,textUsername2,textEmail,textPhone;
     BottomNavigationView bottomNav;
-
+    Button editProfile;
     FirebaseUser user;
     DatabaseReference databaseReference;
 
@@ -39,7 +41,19 @@ public class profile extends AppCompatActivity {
         textUsername2 = findViewById(R.id.fullName2);
         textEmail = findViewById(R.id.email);
         textPhone = findViewById(R.id.phone);
+        editProfile = findViewById(R.id.edit_profile);
         bottomNav = findViewById(R.id.bottomnavigation);
+
+        String email = String.valueOf(textEmail.getText()).trim();
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplicationContext(), edit_profile.class).putExtra("Email",email));
+                overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
+                finish();
+            }
+        });
 
         SharedPreferences sharedPreferences = getSharedPreferences("my_shared_preferences", Context.MODE_PRIVATE);
         String value = sharedPreferences.getString("user", "default_value");
@@ -71,8 +85,6 @@ public class profile extends AppCompatActivity {
             });
         }
 
-
-
         bottomNav.setSelectedItemId(R.id.profile);
 
         bottomNav.setOnItemSelectedListener(item -> {
@@ -95,4 +107,5 @@ public class profile extends AppCompatActivity {
             return false;
         });
     }
+
 }
