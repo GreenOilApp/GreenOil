@@ -44,8 +44,7 @@
         android:layout_height="240dp"
         android:id="@+id/dropoffOption"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/pickupOption"
+        android:layout_marginTop="350dp"
         android:background="@drawable/white_box"
         android:elevation="2dp">
 
