@@ -3,4 +3,24 @@
     <string name="logo">Image of the GreenOil company logo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="saudi_arabia_cities">
+        <item>Riyadh</item>
+        <item>Jeddah</item>
+        <item>Dammam</item>
+    </string-array>
+    <string-array name="riyadh_options">
+        <item>NAS Petroleum</item>
+        <item>Petro SAS Industrial Company</item>
+        <item>Mobil Petroleum Products Factory</item>
+    </string-array>
+    <string-array name="jeddah_options">
+        <item>United Gulf Oil Industrial Company</item>
+        <item>Al-Manar Lubricants Factory Company</item>
+        <item>Barakat Al-Hejaz Oil Refining Factory</item>
+    </string-array>
+    <string-array name="dammam_options">
+        <item>BIOFUEL LIMITED</item>
+        <item>Al-Majwal Factory for oxidized asphalt and insulating materials</item>
+        <item>Factory of Muqeem Khaled Al-Arji and Sons Company Ltd. for bitumen mixtures</item>
+    </string-array>
 </resources>

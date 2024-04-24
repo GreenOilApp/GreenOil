@@ -24,8 +24,6 @@
             android:layout_marginStart="10dp"
             android:layout_gravity="center"
             android:background="@android:color/transparent">
-<!--            To complete onClick to go back-->
-<!--            android:onClick="">-->
         </ImageButton>
     </FrameLayout>
 

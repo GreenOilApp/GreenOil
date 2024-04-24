@@ -52,7 +52,6 @@
         android:layout_below="@+id/component1">
 
         <Button
-            android:id="@+id/recycl"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginRight="25dp"
