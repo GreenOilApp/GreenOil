@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,9 +11,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".EditProfile"
-            android:exported="false" />
-        <activity
-            android:name=".edit_profile"
             android:exported="false" />
         <activity
             android:name=".ScheduleDropoff"
@@ -48,11 +46,13 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/EditText"></activity>
+            android:theme="@style/EditText">
+        </activity>
         <activity
             android:name=".EmailSignupActivity"
             android:exported="false"
-            android:theme="@style/EditText"></activity>
+            android:theme="@style/EditText">
+        </activity>
     </application>
 
 </manifest>

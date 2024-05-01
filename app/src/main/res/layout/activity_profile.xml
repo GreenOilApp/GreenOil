@@ -18,11 +18,11 @@
         android:id="@+id/profileImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="40dp"
-        android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
         app:shapeAppearanceOverlay="@style/circular"
-        app:srcCompat="@drawable/profile_picture"/>
+        app:srcCompat="@drawable/profile_picture" />
 
     <TextView
         android:id="@+id/fullName1"
