@@ -18,7 +18,7 @@
             android:name=".ScheduleDropoff"
             android:exported="false" />
         <activity
-            android:name=".profile"
+            android:name=".Profile"
             android:exported="false" />
         <activity
             android:name=".ScheduleOptions"
@@ -30,7 +30,7 @@
             android:name=".SchedulePickupActivity"
             android:exported="false" />
         <activity
-            android:name=".forgot_pass"
+            android:name=".ForgotPass"
             android:exported="false"
             android:theme="@style/EditText" />
         <activity

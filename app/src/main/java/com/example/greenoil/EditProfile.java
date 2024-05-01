@@ -67,7 +67,7 @@ public class EditProfile extends AppCompatActivity {
 
                                 Toast.makeText(EditProfile.this, "Info has been updated.",
                                         Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(EditProfile.this, profile.class);
+                                Intent intent = new Intent(EditProfile.this, Profile.class);
                                 startActivity(intent);
                                 finish();
 

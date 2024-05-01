@@ -15,7 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class forgot_pass extends AppCompatActivity {
+public class ForgotPass extends AppCompatActivity {
 
     Button btnReset, btnBack;
     EditText edtEmail;
@@ -48,20 +48,20 @@ public class forgot_pass extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
 
                             if(task.isSuccessful()){
-                                Toast.makeText(forgot_pass.this, "Check Your Email",
+                                Toast.makeText(ForgotPass.this, "Check Your Email",
                                         Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent( forgot_pass.this,LoginActivity.class);
+                                Intent intent = new Intent( ForgotPass.this,LoginActivity.class);
                                 startActivity(intent);
 
                             }
                             else{
-                                Toast.makeText(forgot_pass.this, "This Email is not Registered",
+                                Toast.makeText(ForgotPass.this, "This Email is not Registered",
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
                 }else {
-                    Toast.makeText(forgot_pass.this, "Invalid Email",
+                    Toast.makeText(ForgotPass.this, "Invalid Email",
                             Toast.LENGTH_SHORT).show();
                 }
             }
@@ -70,7 +70,7 @@ public class forgot_pass extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( forgot_pass.this,LoginActivity.class);
+                Intent intent = new Intent( ForgotPass.this,LoginActivity.class);
                 startActivity(intent);
 
             }

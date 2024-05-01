@@ -53,7 +53,7 @@ public class ScheduleOptions extends AppCompatActivity {
                 case R.id.schedule:
                     return true;
                 case R.id.profile:
-                    startActivity(new Intent(getApplicationContext(), profile.class));
+                    startActivity(new Intent(getApplicationContext(), Profile.class));
                     overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
                     finish();
                     return true;

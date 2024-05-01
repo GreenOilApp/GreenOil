@@ -1,12 +1,9 @@
 package com.example.greenoil;
 
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -107,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,forgot_pass.class);
+                Intent intent = new Intent(LoginActivity.this, ForgotPass.class);
                 startActivity(intent);
 
             }
