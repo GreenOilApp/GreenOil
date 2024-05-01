@@ -20,7 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
-public class edit_profile extends AppCompatActivity {
+public class EditProfile extends AppCompatActivity {
+
 
     TextInputEditText name,phone;
     TextView email;
@@ -30,7 +31,7 @@ public class edit_profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_profile2);
+        setContentView(R.layout.activity_edit_profile);
 
         name = findViewById(R.id.name);
         phone = findViewById(R.id.phone);
@@ -64,14 +65,14 @@ public class edit_profile extends AppCompatActivity {
                         public void onComplete(@NonNull Task task) {
                             if(task.isSuccessful()){
 
-                                Toast.makeText(edit_profile.this, "Info has been updated.",
+                                Toast.makeText(EditProfile.this, "Info has been updated.",
                                         Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(edit_profile.this, profile.class);
+                                Intent intent = new Intent(EditProfile.this, profile.class);
                                 startActivity(intent);
                                 finish();
 
                             }else{
-                                Toast.makeText(edit_profile.this, "There is a problem updating the info.",
+                                Toast.makeText(EditProfile.this, "There is a problem updating the info.",
                                         Toast.LENGTH_SHORT).show();
                             }
                         }

@@ -49,7 +49,7 @@ public class profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getApplicationContext(), edit_profile.class).putExtra("Email",email));
+                startActivity(new Intent(getApplicationContext(), EditProfile.class).putExtra("Email",email));
                 overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
                 finish();
             }
