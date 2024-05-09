@@ -85,7 +85,6 @@ public class EmailSignupActivity extends AppCompatActivity {
                                         user.put("Name", name);
                                         user.put("Email", email);
                                         user.put("Phone Number", num);
-                                        user.put("Image", "");
 
                                         mDatabase.child(user1.getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
