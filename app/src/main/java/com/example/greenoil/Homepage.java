@@ -33,7 +33,7 @@ public class Homepage extends AppCompatActivity {
                     return true;
 
                 case R.id.profile:
-                    startActivity(new Intent(getApplicationContext(), profile.class));
+                    startActivity(new Intent(getApplicationContext(), Profile.class));
                     overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
                     finish();
                     return true;

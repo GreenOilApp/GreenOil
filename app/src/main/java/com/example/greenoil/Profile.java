@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class profile extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
 
     TextView textUsername1,textUsername2,textEmail,textPhone;
     BottomNavigationView bottomNav;

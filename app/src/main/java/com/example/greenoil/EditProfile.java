@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-public class editProfile extends AppCompatActivity {
+public class EditProfile extends AppCompatActivity {
 
     ImageView imageView;
     TextInputEditText name,email,phone;
