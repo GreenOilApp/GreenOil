@@ -25,14 +25,14 @@ public class Schedule extends AppCompatActivity {
 
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(), Homepage.class));
-                    overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
+                    overridePendingTransition(R.anim.to_right1, R.anim.to_right2);
                     finish();
                     return true;
                 case R.id.schedule:
                     return true;
                 case R.id.profile:
                     startActivity(new Intent(getApplicationContext(), Profile.class));
-                    overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
+                    overridePendingTransition(R.anim.to_right1, R.anim.to_right2);
                     finish();
                     return true;
             }

@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class ScheduleDropoff extends AppCompatActivity {
 
     private ImageButton backToOptionsBtn;
@@ -78,8 +76,9 @@ public class ScheduleDropoff extends AppCompatActivity {
     }
 
     private void backToScheduleOptions() {
-        Intent intent = new Intent(this, ScheduleOptions.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(), ScheduleOptions.class));
+        overridePendingTransition(R.anim.to_left1, R.anim.to_left2);
+        finish();
     }
 
 }

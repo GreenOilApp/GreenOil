@@ -54,6 +54,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:id="@+id/recycleBut"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
             android:background="@drawable/button_rectangle1"
@@ -78,6 +79,7 @@
         <ImageButton
             android:layout_width="340dp"
             android:layout_height="130dp"
+            android:id="@+id/ehsanBut"
             android:layout_gravity="center"
             android:src="@drawable/ehsan" />
 
@@ -93,12 +95,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:id="@+id/pointBut"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
             android:paddingLeft="15dp"
             android:paddingRight="10dp"
             android:gravity="left|center"
-            android:background="@drawable/button_rectangle2"
+            android:background="@drawable/white_box"
             android:text="Your Points"
             android:textSize="15dp"
             android:textAllCaps="false"
@@ -122,13 +125,13 @@
             <Button
                 android:layout_width="114dp"
                 android:layout_height="60dp"
-                android:id="@+id/learnBut"
+                android:id="@+id/serviceBut"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/button_rectangle2"
-                android:drawableTop="@drawable/icon_info"
-                android:text="Learn more"
+                android:background="@drawable/white_box"
+                android:drawableTop="@drawable/icon_service"
+                android:text="Service"
                 android:textSize="13dp"
                 android:textAllCaps="false" />
 
@@ -136,11 +139,11 @@
                 android:layout_width="114dp"
                 android:layout_height="60dp"
                 android:id="@+id/rewardBut"
-                android:layout_toRightOf="@+id/learnBut"
+                android:layout_toRightOf="@+id/serviceBut"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/button_rectangle2"
+                android:background="@drawable/white_box"
                 android:drawableTop="@drawable/icon_gift"
                 android:text="Your rewards"
                 android:textSize="13dp"
@@ -153,7 +156,7 @@
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:layout_toRightOf="@+id/rewardBut"
-                android:background="@drawable/button_rectangle2"
+                android:background="@drawable/white_box"
                 android:drawableTop="@drawable/icon_explore"
                 android:text="Explore rewards"
                 android:textSize="13dp"

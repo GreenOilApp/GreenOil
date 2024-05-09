@@ -16,11 +16,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -112,7 +110,7 @@ public class Profile extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivity(new Intent(getApplicationContext(), EditProfile.class).putExtra("Email",email1[0]));
-                overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
+                overridePendingTransition(R.anim.to_right1, R.anim.to_right2);
                 finish();
             }
         });
@@ -125,12 +123,12 @@ public class Profile extends AppCompatActivity {
 
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(), Homepage.class));
-                    overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
+                    overridePendingTransition(R.anim.to_left1, R.anim.to_left2);
                     finish();
                     return true;
                 case R.id.schedule:
                     startActivity(new Intent(getApplicationContext(), ScheduleOptions.class));
-                    overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
+                    overridePendingTransition(R.anim.to_left1, R.anim.to_left2);
                     finish();
                     return true;
                 case R.id.profile:

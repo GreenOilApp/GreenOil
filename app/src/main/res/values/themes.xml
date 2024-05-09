@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
-        <item name="android:activityOpenEnterAnimation">@anim/slide_right</item>
-        <item name="android:activityOpenExitAnimation">@anim/slide_left</item>
+        <item name="android:activityOpenEnterAnimation">@anim/to_right1</item>
+        <item name="android:activityOpenExitAnimation">@anim/to_right2</item>
     </style>
 </resources>

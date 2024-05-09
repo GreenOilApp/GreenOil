@@ -47,14 +47,14 @@ public class ScheduleOptions extends AppCompatActivity {
 
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(), Homepage.class));
-                    overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
+                    overridePendingTransition(R.anim.to_left1, R.anim.to_left2);
                     finish();
                     return true;
                 case R.id.schedule:
                     return true;
                 case R.id.profile:
                     startActivity(new Intent(getApplicationContext(), Profile.class));
-                    overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
+                    overridePendingTransition(R.anim.to_right1, R.anim.to_right2);
                     finish();
                     return true;
             }
@@ -63,12 +63,14 @@ public class ScheduleOptions extends AppCompatActivity {
     }
 
     private void pickupOption() {
-        Intent intent = new Intent(this, SchedulePickupActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(), SchedulePickupActivity.class));
+        overridePendingTransition(R.anim.to_right1, R.anim.to_right2);
+        finish();
     }
 
     private void dropoffOption() {
-        Intent intent = new Intent(this, ScheduleDropoff.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(), ScheduleDropoff.class));
+        overridePendingTransition(R.anim.to_right1, R.anim.to_right2);
+        finish();
     }
 }

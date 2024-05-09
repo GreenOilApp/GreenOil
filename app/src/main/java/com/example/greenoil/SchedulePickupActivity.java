@@ -4,11 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -193,8 +190,9 @@ public class SchedulePickupActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private void backToScheduleOptions() {
-        Intent intent = new Intent(this, ScheduleOptions.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(), ScheduleOptions.class));
+        overridePendingTransition(R.anim.to_left1, R.anim.to_left2);
+        finish();
     }
 
 }
