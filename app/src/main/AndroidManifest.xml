@@ -9,6 +9,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Confirmation"
+            android:exported="false" />
+        <activity
+            android:name=".SummaryDropoff"
+            android:exported="false" />
+        <activity
+            android:name=".SummaryPickup"
+            android:exported="false" />
+        <activity
             android:name=".Service"
             android:exported="false" />
         <activity

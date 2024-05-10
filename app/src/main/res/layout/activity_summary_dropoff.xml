@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SummaryDropoff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/Component1">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/icon_arrow_back"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Order Summary"
+            android:textSize="26dp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Component2"
+        android:layout_below="@+id/Component1"
+        android:layout_marginTop="30dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/line1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rectangul4"/>
+
+        <!-- 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/oil"
+            android:layout_below="@+id/line1"
+            android:layout_marginLeft="30dp"
+            android:text="Oil Type"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:text="Cooking"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+        <!-- 1 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/line2"
+            android:layout_below="@+id/oil"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rectangul4"/>
+
+        <!-- 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantity"
+            android:layout_below="@+id/line2"
+            android:layout_marginLeft="30dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/point"
+            android:layout_below="@+id/line2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+        <!-- 2 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/line3"
+            android:layout_below="@+id/quantity"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rectangul4"/>
+
+        <!-- 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line3"
+            android:layout_marginLeft="30dp"
+            android:text="City"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city"
+            android:layout_below="@+id/line3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+        <!-- 3 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/line4"
+            android:layout_below="@+id/city"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rectangul4"/>
+
+        <!-- 4 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line4"
+            android:layout_marginLeft="30dp"
+            android:text="Factory"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/factory"
+            android:layout_below="@+id/line4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+        <!-- 4 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/line5"
+            android:layout_below="@+id/factory"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rectangul4"/>
+
+    </RelativeLayout>
+
+    <!--Submit Button-->
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="57dp"
+        android:id="@+id/submitBtn"
+        android:layout_below="@id/Component2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:padding="5dp"
+        android:background="@drawable/button_rectangle1"
+        android:text="SUBMIT ORDER"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

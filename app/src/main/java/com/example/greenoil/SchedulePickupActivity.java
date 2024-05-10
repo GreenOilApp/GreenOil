@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -16,15 +17,13 @@ import java.util.Locale;
 
 public class SchedulePickupActivity extends AppCompatActivity {
 
-    private static final String TAG = "SchedulePickupActivity";
-    private TextView mDisplayDate;
+    TextView mDisplayDate, valueTextView, mDisplayTime, changeAddressText;
+    ImageButton backToOptionsBtn;
+    Button next;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
-    private TextView valueTextView;
-    private double value = 5.0;
-    private TextView mDisplayTime;
     private TimePickerDialog.OnTimeSetListener mTimeSetListener;
-    private TextView changeAddressText;
-    private ImageButton backToOptionsBtn;
+    private double value = 5.0;
+    private static final String TAG = "SchedulePickupActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,9 +153,17 @@ public class SchedulePickupActivity extends AppCompatActivity {
             }
 
         };
+
+        next = findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SummaryPickup.class));
+                overridePendingTransition(R.anim.to_right1, R.anim.to_right2);
+                finish();
+            }
+        });
     }
-
-
 
     public void addValue(View view) {
         value+=0.5;

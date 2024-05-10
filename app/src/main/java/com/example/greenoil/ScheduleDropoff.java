@@ -3,22 +3,22 @@ package com.example.greenoil;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ScheduleDropoff extends AppCompatActivity {
 
-    private ImageButton backToOptionsBtn;
-    private Spinner citySpinner;
-    private Spinner optionsSpinner;
-    private TextView forDirectionsText;
-    private TextView directionsLink;
-    private TextView valueTextView;
+    ImageButton backToOptionsBtn;
+    Spinner citySpinner, optionsSpinner;
+    TextView valueTextView;
+    Button next;
     private double value = 5.0;
 
     @Override
@@ -39,15 +39,14 @@ public class ScheduleDropoff extends AppCompatActivity {
         valueTextView = findViewById(R.id.quantityAmount);
         updateValueText();
 
-        forDirectionsText = findViewById(R.id.forDirectionsTxt);
-        directionsLink = findViewById(R.id.directionsLink);
-
-        Spinner citySpinner = findViewById(R.id.spinner_city);
-        Spinner optionsSpinner = findViewById(R.id.spinner_options);
+        citySpinner = findViewById(R.id.spinner_city);
+        optionsSpinner = findViewById(R.id.spinner_options);
         ArrayAdapter<CharSequence> cityAdapter = ArrayAdapter.createFromResource(
                 this, R.array.saudi_arabia_cities, android.R.layout.simple_spinner_item);
         cityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         citySpinner.setAdapter(cityAdapter);
+
+        final String[] directions = {""};
 
         citySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -65,18 +64,34 @@ public class ScheduleDropoff extends AppCompatActivity {
                         optionsArray = getResources().getStringArray(R.array.dammam_options);
                         break;
                 }
-                ArrayAdapter<String> optionsAdapter = new ArrayAdapter<>(ScheduleDropoff.this,
+                ArrayAdapter<String> optionsAdapter3 = new ArrayAdapter<>(ScheduleDropoff.this,
                         android.R.layout.simple_spinner_item, optionsArray);
-                optionsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                optionsSpinner.setAdapter(optionsAdapter);
-                if (position == 0) {
-                } else {
-                }
+                optionsAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                optionsSpinner.setAdapter(optionsAdapter3);
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 // Do nothing
+            }
+        });
+
+        next = findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String quantity = valueTextView.getText().toString();
+                String city = citySpinner.getSelectedItem().toString();
+                String factory = optionsSpinner.getSelectedItem().toString();
+
+                Intent intent = new Intent(getApplicationContext(), SummaryDropoff.class);
+                intent.putExtra("quantity",quantity);
+                intent.putExtra("city",city);
+                intent.putExtra("factory",factory);
+                startActivity(intent);
+                overridePendingTransition(R.anim.to_right1, R.anim.to_right2);
+                finish();
+
             }
         });
     }

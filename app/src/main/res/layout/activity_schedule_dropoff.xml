@@ -9,7 +9,7 @@
     tools:context=".SchedulePickupActivity"
     android:background="@color/off_white">
 
-    <!--    Back Arrow Layout-->
+    <!--Back Arrow Layout-->
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,8 +23,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_gravity="center"
-            android:background="@android:color/transparent">
-        </ImageButton>
+            android:background="@android:color/transparent"/>
 
     </FrameLayout>
 
@@ -126,10 +125,10 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="155dp"
         android:id="@+id/dropComponent3"
         android:layout_below="@+id/dropComponent2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:padding="20dp">
 
         <Spinner
@@ -154,26 +153,6 @@
             android:background="@drawable/white_box"
             android:elevation="10dp" />
 
-        <TextView
-            android:id="@+id/forDirectionsTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="For Directions"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="110dp"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:visibility="gone"/>
-
-        <TextView
-            android:id="@+id/directionsLink"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="135dp"
-            android:text="https://maps.app.goo.gl/k7UwrbKS7aHu8hPp8"
-            android:textColor="@color/blue"
-            android:visibility="gone"/>
 
     </FrameLayout>
 
@@ -184,7 +163,7 @@
         android:id="@+id/next"
         android:layout_below="@id/dropComponent3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:padding="5dp"
         android:background="@drawable/button_rectangle1"
         android:text="Next"
