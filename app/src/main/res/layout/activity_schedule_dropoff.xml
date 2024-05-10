@@ -28,12 +28,109 @@
 
     </FrameLayout>
 
+    <!--Choose Quantity Layout-->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="355dp"
+        android:layout_height="180dp"
         android:id="@+id/dropComponent2"
         android:layout_below="@+id/dropComponent1"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity (L)"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <FrameLayout
+            android:id="@+id/pickComponent2_1"
+            android:layout_width="370dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/white_box"
+            android:elevation="15dp">
+
+
+            <!--Subtract Quantity button-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/light_grey"
+                app:cardElevation="0dp"
+                android:layout_marginStart="25dp"
+                android:elevation="0dp">
+
+                <ImageButton
+                    android:id="@+id/subtractQuantity"
+                    android:layout_width="65dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/substract"
+                    android:scaleType="centerCrop"
+                    android:padding="9dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    android:onClick="subtractValue"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--Quantity Amount-->
+            <TextView
+                android:id="@+id/quantityAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="5.00"
+                android:textColor="@color/black"
+                android:textSize="34sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="1 L = 1 Point"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="30dp"/>
+
+
+            <!--Add Quantity button-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/light_grey"
+                app:cardElevation="0dp"
+                android:layout_marginStart="265dp">
+
+                <ImageButton
+                    android:id="@+id/addQuantity"
+                    android:layout_width="65dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/plus"
+                    android:scaleType="centerCrop"
+                    android:padding="9dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:onClick="addValue"/>
+
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:id="@+id/dropComponent3"
+        android:layout_below="@+id/dropComponent2"
+        android:layout_marginTop="20dp"
+        android:padding="20dp">
 
         <Spinner
             android:id="@+id/spinner_city"
@@ -43,7 +140,7 @@
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
             android:background="@drawable/white_box"
-            android:elevation="2dp"
+            android:elevation="10dp"
             android:layout_marginBottom="30dp"/>
 
         <Spinner
@@ -55,8 +152,7 @@
             android:layout_marginTop="55dp"
             android:textAlignment="center"
             android:background="@drawable/white_box"
-            android:elevation="2dp"
-            />
+            android:elevation="10dp" />
 
         <TextView
             android:id="@+id/forDirectionsTxt"
@@ -68,6 +164,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:visibility="gone"/>
+
         <TextView
             android:id="@+id/directionsLink"
             android:layout_width="300dp"
@@ -78,39 +175,22 @@
             android:textColor="@color/blue"
             android:visibility="gone"/>
 
-
     </FrameLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/pickComponent8"
-        android:layout_below="@id/dropComponent2"
-        android:layout_marginTop="20dp">
+    <!--Next Button-->
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="57dp"
+        android:id="@+id/next"
+        android:layout_below="@id/dropComponent3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        android:background="@drawable/button_rectangle1"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
-        <FrameLayout
-            android:id="@+id/pickComponent8_1"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:background="@drawable/button_rectangle1"
-            android:elevation="4dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:layout_gravity="center"
-                android:text="Next"
-                android:textColor="@color/white"
-                android:textSize="35sp"
-                android:textStyle="bold">
-
-            </Button>
-
-
-        </FrameLayout>
-
-    </FrameLayout>
 
 </RelativeLayout>

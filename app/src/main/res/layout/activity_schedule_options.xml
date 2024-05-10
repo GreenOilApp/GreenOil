@@ -12,65 +12,59 @@
 
     <FrameLayout
         android:layout_width="350dp"
-        android:layout_height="225dp"
+        android:layout_height="240dp"
         android:id="@+id/pickupOption"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
+        android:paddingBottom="20dp"
         android:background="@drawable/white_box"
-        android:elevation="2dp">
+        android:elevation="20dp">
 
         <Button
             android:id="@+id/pickupBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="240dp"
+            android:layout_height="47dp"
             android:text="Pick up"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:textColor="@color/black"
             android:layout_gravity="center_horizontal|bottom"
-            android:background="@drawable/button_rectangle1"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"/>
+            android:background="@drawable/button_rectangle1"/>
 
         <ImageView
-            android:layout_width="350dp"
-            android:layout_height="150dp"
+            android:layout_width="340dp"
+            android:layout_height="140dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/distribution"
-            android:layout_marginTop="10dp"
-            />
-
+            android:layout_marginTop="10dp" />
 
     </FrameLayout>
 
     <FrameLayout
         android:layout_width="350dp"
-        android:layout_height="225dp"
+        android:layout_height="240dp"
         android:id="@+id/dropoffOption"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="370dp"
+        android:paddingBottom="20dp"
         android:background="@drawable/white_box"
-        android:elevation="2dp">
+        android:elevation="20dp">
 
         <Button
             android:id="@+id/dropoffBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="240dp"
+            android:layout_height="47dp"
             android:text="Drop Off"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:textColor="@color/black"
             android:layout_gravity="center_horizontal|bottom"
-            android:background="@drawable/button_rectangle1"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"/>
+            android:background="@drawable/button_rectangle1" />
 
         <ImageView
-            android:layout_width="350dp"
-            android:layout_height="150dp"
+            android:layout_width="340dp"
+            android:layout_height="140dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/dropoff"
-            android:layout_marginTop="10dp"
-            />
-
+            android:layout_marginTop="10dp" />
 
     </FrameLayout>
 

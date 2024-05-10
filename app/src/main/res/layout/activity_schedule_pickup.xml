@@ -9,7 +9,8 @@
     tools:context=".SchedulePickupActivity"
     android:background="@color/off_white">
 
-<!--    Back Arrow Layout-->
+
+    <!--Back Arrow Layout-->
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,14 +24,15 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_gravity="center"
-            android:background="@android:color/transparent">
-        </ImageButton>
+            android:background="@android:color/transparent"/>
+
     </FrameLayout>
 
-<!--    Choose Quantity Layout-->
+
+    <!--Choose Quantity Layout-->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="155dp"
+        android:layout_height="180dp"
         android:id="@+id/pickComponent2"
         android:layout_below="@+id/pickComponent1">
 
@@ -40,19 +42,19 @@
             android:text="Quantity (L)"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/black"
-            android:textSize="20sp">
-        </TextView>
+            android:textSize="20sp"/>
 
         <FrameLayout
             android:id="@+id/pickComponent2_1"
             android:layout_width="370dp"
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/white_box"
-            android:elevation="3dp">
+            android:elevation="15dp">
 
-<!--            Subtract Quantity button-->
+
+            <!--Subtract Quantity button-->
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,13 +74,12 @@
                     android:layout_gravity="center"
                     android:background="@color/white"
                     android:elevation="0dp"
-                    android:onClick="subtractValue">
-
-                </ImageButton>
+                    android:onClick="subtractValue"/>
 
             </androidx.cardview.widget.CardView>
 
-<!--            Quantity Amount-->
+
+            <!--Quantity Amount-->
             <TextView
                 android:id="@+id/quantityAmount"
                 android:layout_width="wrap_content"
@@ -87,9 +88,8 @@
                 android:text="5.00"
                 android:textColor="@color/black"
                 android:textSize="34sp"
-                android:textStyle="bold">
+                android:textStyle="bold"/>
 
-            </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -97,11 +97,10 @@
                 android:text="1 L = 1 Point"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="30dp"/>
 
-            </TextView>
 
-<!--            Add Quantity button-->
+            <!--Add Quantity button-->
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -119,80 +118,70 @@
                     android:padding="9dp"
                     android:layout_gravity="center"
                     android:background="@color/white"
-                    android:onClick="addValue">
+                    android:onClick="addValue"/>
 
-                </ImageButton>
             </androidx.cardview.widget.CardView>
-
         </FrameLayout>
-
     </FrameLayout>
 
-<!--    Address-->
+
+    <!--Address-->
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
         android:id="@+id/pickComponent3"
         android:layout_below="@+id/pickComponent2"
-        android:layout_marginTop="15dp">
+        android:layout_width="370dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_box"
+        android:elevation="15dp">
 
-        <FrameLayout
-            android:id="@+id/pickComponent3_1"
-            android:layout_width="370dp"
-            android:layout_height="90dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/white_box"
-            android:elevation="3dp">
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="15dp"
-                android:src="@drawable/placeholder">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/placeholder"/>
 
-            </ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Home Address"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="12dp">
-            </TextView>
-            <TextView
-                android:layout_width="190dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="32dp"
-                android:textSize="13sp"
-                android:text="Jeddah - Alrabwah 23553, Asbat Bin Nasr St."
-                android:textColor="@color/black">
-            </TextView>
-            <TextView
-                android:id="@+id/changeAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="263dp"
-                android:layout_gravity="center_vertical"
-                android:textSize="20sp"
-                android:text="CHANGE"
-                android:textStyle="bold"
-                android:textColor="@color/green">
-            </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home Address"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="12dp"/>
 
-        </FrameLayout>
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
+            android:textSize="13sp"
+            android:text="Jeddah - Alrabwah 23553, Asbat Bin Nasr St."
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/changeAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="265dp"
+            android:text="CHANGE"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
     </FrameLayout>
 
-<!--    Schedule Pickup-->
+
+    <!--Schedule Pickup-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/pickkComponent5"
         android:layout_below="@+id/pickComponent3"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="30dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -210,31 +199,30 @@
             >
         </TextView>
 
-<!--        Select Date-->
-    <FrameLayout
-        android:id="@+id/pickComponent5_1"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="65dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/white_box"
-        android:elevation="2dp">
 
-        <TextView
-            android:layout_width="125dp"
-            android:layout_height="25dp"
-            android:hint="Select Date"
-            android:id="@+id/tvDate"
-            android:layout_gravity="center"
-            android:textSize="17sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:gravity="center"
-            >
+        <!--Select Date-->
+        <FrameLayout
+            android:id="@+id/pickComponent5_1"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="65dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/white_box"
+            android:elevation="10dp">
 
-        </TextView>
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="25dp"
+                android:hint="Select Date"
+                android:id="@+id/tvDate"
+                android:layout_gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"/>
 
-    </FrameLayout>
+        </FrameLayout>
+
         <FrameLayout
             android:id="@+id/pickComponent5_2"
             android:layout_width="200dp"
@@ -242,7 +230,7 @@
             android:layout_marginTop="120dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/white_box"
-            android:elevation="2dp">
+            android:elevation="10dp">
 
             <TextView
                 android:layout_width="125dp"
@@ -253,110 +241,26 @@
                 android:textSize="17sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:gravity="center"
-                >
-
-            </TextView>
+                android:gravity="center"/>
 
         </FrameLayout>
 
-
     </FrameLayout>
 
-    <!--    Next Button-->
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/pickComponent8"
+    <!--Next Button-->
+    <Button
+        android:layout_width="290dp"
+        android:layout_height="57dp"
+        android:id="@+id/next"
         android:layout_below="@id/pickkComponent5"
-        android:layout_marginTop="20dp">
-
-        <FrameLayout
-            android:id="@+id/pickComponent8_1"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:background="@drawable/button_rectangle1"
-            android:elevation="4dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:layout_gravity="center"
-                android:text="Next"
-                android:textColor="@color/white"
-                android:textSize="35sp"
-                android:textStyle="bold">
-<!--                To make onClick-->
-
-            </Button>
-
-
-        </FrameLayout>
-
-    </FrameLayout>
-
-
-    <!--&lt;!&ndash;    Navigation Bar&ndash;&gt;-->
-<!--    <FrameLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:id="@+id/component7"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginTop="25dp">-->
-
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:gravity="center">-->
-
-<!--            <Button-->
-<!--                android:layout_width="114dp"-->
-<!--                android:layout_height="60dp"-->
-<!--                android:id="@+id/learnBut"-->
-<!--                android:paddingTop="7dp"-->
-<!--                android:paddingBottom="7dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@drawable/button_rectangle2"-->
-<!--                android:drawableTop="@drawable/icon_info"-->
-<!--                android:text="Learn more"-->
-<!--                android:textSize="13sp"-->
-<!--                android:textAllCaps="false" />-->
-
-<!--            <Button-->
-<!--                android:layout_width="114dp"-->
-<!--                android:layout_height="60dp"-->
-<!--                android:id="@+id/rewardBut"-->
-<!--                android:layout_toEndOf="@+id/learnBut"-->
-<!--                android:paddingTop="7dp"-->
-<!--                android:paddingBottom="7dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@drawable/button_rectangle2"-->
-<!--                android:drawableTop="@drawable/icon_gift"-->
-<!--                android:text="Your rewards"-->
-<!--                android:textSize="13sp"-->
-<!--                android:textAllCaps="false"/>-->
-
-<!--            <Button-->
-<!--                android:layout_width="114dp"-->
-<!--                android:layout_height="60dp"-->
-<!--                android:id="@+id/exploreBut"-->
-<!--                android:paddingTop="7dp"-->
-<!--                android:paddingBottom="7dp"-->
-<!--                android:layout_toEndOf="@+id/rewardBut"-->
-<!--                android:background="@drawable/button_rectangle2"-->
-<!--                android:drawableTop="@drawable/icon_explore"-->
-<!--                android:text="Explore rewards"-->
-<!--                android:textSize="13sp"-->
-<!--                android:textAllCaps="false"/>-->
-
-<!--        </RelativeLayout>-->
-
-<!--    </FrameLayout>-->
-
-
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:background="@drawable/button_rectangle1"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
 </RelativeLayout>

@@ -18,13 +18,15 @@ public class ScheduleDropoff extends AppCompatActivity {
     private Spinner optionsSpinner;
     private TextView forDirectionsText;
     private TextView directionsLink;
+    private TextView valueTextView;
+    private double value = 5.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule_dropoff);
 
-//        Back arrow
+        //Back arrow
         backToOptionsBtn = findViewById(R.id.backToOptionsBtn);
         backToOptionsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,10 @@ public class ScheduleDropoff extends AppCompatActivity {
                 backToScheduleOptions();
             }
         });
+
+
+        valueTextView = findViewById(R.id.quantityAmount);
+        updateValueText();
 
         forDirectionsText = findViewById(R.id.forDirectionsTxt);
         directionsLink = findViewById(R.id.directionsLink);
@@ -79,6 +85,25 @@ public class ScheduleDropoff extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), ScheduleOptions.class));
         overridePendingTransition(R.anim.to_left1, R.anim.to_left2);
         finish();
+    }
+
+    public void addValue(View view) {
+        value+=0.5;
+        updateValueText();
+    }
+
+    public void subtractValue(View view) {
+        if (value > 5) {
+            value-=0.5;
+            updateValueText();
+        }
+    }
+
+    private void updateValueText() {
+        if (value < 5){
+            value = 5;
+        }
+        valueTextView.setText(String.valueOf(value));
     }
 
 }

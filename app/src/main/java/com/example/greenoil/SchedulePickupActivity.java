@@ -66,17 +66,10 @@ public class SchedulePickupActivity extends AppCompatActivity {
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
 
-//                // Set the maximum date by a week & minimum date by today
-//                cal.add(Calendar.WEEK_OF_YEAR, 1);
-//                int maxYear = cal.get(Calendar.YEAR);
-//                int maxMonth = cal.get(Calendar.MONTH);
-//                int maxDay = cal.get(Calendar.DAY_OF_MONTH);
-
                 cal = Calendar.getInstance();
                 int minYear = cal.get(Calendar.YEAR);
                 int minMonth = cal.get(Calendar.MONTH);
                 int minDay = cal.get(Calendar.DAY_OF_MONTH);
-
 
                 DatePickerDialog dialog = new DatePickerDialog(SchedulePickupActivity.this,
                         android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth,
@@ -130,7 +123,6 @@ public class SchedulePickupActivity extends AppCompatActivity {
                         android.R.style.Theme_DeviceDefault_Dialog_MinWidth,
                         mTimeSetListener,
                         hour, minute, false);
-
 
                 dialog.show();
             }
