@@ -15,21 +15,23 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.google.ai.client.generativeai.GenerativeModel;
+import com.google.ai.client.generativeai.java.GenerativeModelFutures;
+import com.google.ai.client.generativeai.type.Content;
+import com.google.ai.client.generativeai.type.GenerateContentResponse;
+import com.google.common.util.concurrent.FutureCallback;
+import com.google.common.util.concurrent.Futures;
+import com.google.common.util.concurrent.ListenableFuture;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
 
-import okhttp3.Call;
-import okhttp3.Callback;
+
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 public class Service extends AppCompatActivity {
 
@@ -77,7 +79,7 @@ public class Service extends AppCompatActivity {
 
                 String question = String.valueOf(messageEditText.getText()).trim();
                 addToChat(question,Message.SENT_BY_ME);
-//                callAPI(question);
+                callAPI(question);
                 messageEditText.setText("");
             }
         });
@@ -94,4 +96,35 @@ public class Service extends AppCompatActivity {
         });
     }
 
+    void addResponse(String response){
+
+        messageList.remove(messageList.size()-1);
+        addToChat(response,Message.SENT_BY_BOT);
+    }
+    void callAPI(String question){
+
+        messageList.add(new Message("Typing... ",Message.SENT_BY_BOT));
+
+
+        GenerativeModel gm = new GenerativeModel("gemini-pro", "AIzaSyDENiSbAgirrvc9eoN_YBuoMbd7VpVcmNw");
+        GenerativeModelFutures model = GenerativeModelFutures.from(gm);
+
+        Content content = new Content.Builder()
+                .addText(question)
+                .build();
+
+        Executor executor = Runnable::run;
+        ListenableFuture<GenerateContentResponse> response = model.generateContent(content);
+        Futures.addCallback(response, new FutureCallback<GenerateContentResponse>() {
+            @Override
+            public void onSuccess(GenerateContentResponse result) {
+                addResponse(result.getText());
+
+            }
+            @Override
+            public void onFailure(Throwable t) {
+                t.printStackTrace();
+            }
+        }, executor);
+    }
 }
