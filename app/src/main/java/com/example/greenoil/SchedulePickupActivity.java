@@ -158,7 +158,15 @@ public class SchedulePickupActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), SummaryPickup.class));
+                String quantity = valueTextView.getText().toString();
+                String date = mDisplayDate.getText().toString();
+                String time = mDisplayTime.getText().toString();
+
+                Intent intent = new Intent(getApplicationContext(), SummaryPickup.class);
+                intent.putExtra("quantity",quantity);
+                intent.putExtra("date",date);
+                intent.putExtra("time",time);
+                startActivity(intent);
                 overridePendingTransition(R.anim.to_right1, R.anim.to_right2);
                 finish();
             }

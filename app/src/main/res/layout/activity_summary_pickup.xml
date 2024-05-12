@@ -91,7 +91,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/point1"
+            android:id="@+id/quantity"
             android:layout_below="@+id/line2"
             android:layout_marginLeft="30dp"
             android:textSize="18dp"
@@ -100,7 +100,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/point2"
+            android:id="@+id/point"
             android:layout_below="@+id/line2"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="30dp"
@@ -112,7 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:id="@+id/line3"
-            android:layout_below="@+id/point1"
+            android:layout_below="@+id/quantity"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"

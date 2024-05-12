@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SummaryPickup extends AppCompatActivity {
 
+    TextView quantity, point, date, time;
     ImageButton backBut;
     Button submitBtn;
 
@@ -25,6 +27,17 @@ public class SummaryPickup extends AppCompatActivity {
 
         backBut = findViewById(R.id.backBtn);
         submitBtn = findViewById(R.id.submitBtn);
+
+        quantity = findViewById(R.id.quantity);
+        point = findViewById(R.id.point);
+        date = findViewById(R.id.date);
+        time = findViewById(R.id.time);
+
+        Intent intent = getIntent();
+        quantity.setText(intent.getStringExtra("quantity") + " L Oil");
+        point.setText(intent.getStringExtra("quantity")+ " Points");
+        date.setText(intent.getStringExtra("date"));
+        time.setText(intent.getStringExtra("time"));
 
 
         backBut.setOnClickListener(new View.OnClickListener() {

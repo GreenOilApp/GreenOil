@@ -1,21 +1,44 @@
 package com.example.greenoil;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+
+import java.io.File;
+import java.io.IOException;
 
 public class Homepage extends AppCompatActivity {
 
     Button recycleBut ,pointBut ,serviceBut ,rewardBut ,exploreBut;
+    TextView point;
     ImageButton ehsanBut;
     BottomNavigationView bottomNav;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +52,7 @@ public class Homepage extends AppCompatActivity {
         serviceBut = findViewById(R.id.serviceBut);
         rewardBut = findViewById(R.id.rewardBut);
         exploreBut = findViewById(R.id.exploreBut);
+        point = findViewById(R.id.point);
         bottomNav = findViewById(R.id.bottomnavigation);
 
         recycleBut.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +72,28 @@ public class Homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        SharedPreferences sharedPreferences = getSharedPreferences("my_shared_preferences", Context.MODE_PRIVATE);
+        String value = sharedPreferences.getString("user", "default_value");
+
+        if (value != null || !value.equals("default_value")){
+
+            databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(value);
+            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    String Point = snapshot.child("Point").getValue(String.class);
+                    point.setText(Point);
+
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Log.d(TAG, "Error getting user data", error.toException());
+                }
+            });
+
+        }
 
         pointBut.setOnClickListener(new View.OnClickListener() {
             @Override

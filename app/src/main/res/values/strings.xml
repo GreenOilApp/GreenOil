@@ -2,6 +2,11 @@
     <string name="app_name">GreenOil</string>
     <string name="logo">Image of the GreenOil company logo</string>
 
+    <string name="Oil">Earn Points by Recycling Used Oil: The more oil you recycle through GreenOil, the more points you accumulate!</string>
+    <string name="Point">Transparent Point System: We directly calculate your points based on the amount of oil you recycle (details per liter/gallon available here)</string>
+    <string name="Track">Track your points and past recycling history conveniently within Your Points section.</string>
+    <string name="Redeem">Redeem Points for Rewards: Earn rewards for your eco-friendly actions, unlocking exclusive benefits like discounts, coupons, or even donatation.</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="saudi_arabia_cities">
         <item>Riyadh</item>
